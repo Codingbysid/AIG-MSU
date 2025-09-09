@@ -20,10 +20,10 @@ const teamMembers: TeamMember[] = [
       name: "Lilia",
       position: "Vice President",
       year: "Junior",
-      major: "Economics",
+      major: "Finance & Economics",
       bio: "Specializing in hedge fund strategies and quantitative analysis methods. Lilia plays a crucial role in organizing events and ensuring smooth operations of the organization.",
       image: "/Vice-President.jpg",
-      achievements: "CFA Level 1, Goldman Sachs Intern",
+      achievements: "CFA Level 1, Goldman Sachs Future Intern",
     },
     {
       name: "Adam",

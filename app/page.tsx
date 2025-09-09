@@ -41,17 +41,19 @@ export default function HomePage() {
                 </h1>
               </div>
               <p className="text-xl text-muted-foreground max-w-2xl text-pretty animate-fade-in-up delay-500">
-                A premiere student organization focused on educating underclassmen about the five main alternative asset classes: private equity, private credit, hedge funds, venture capital, and real estate.
+                A premiere student organization focused on educating underclassmen about the six main alternative asset classes: private equity, private credit, hedge funds, venture capital, real estate, and secondaries.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up delay-700">
-                <Button
-                  size="lg"
-                  className="bg-accent hover:bg-accent/90 text-accent-foreground group transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-accent/25 relative overflow-hidden"
-                >
-                  <span className="relative z-10">Learn More About AIG</span>
-                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform relative z-10" />
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
-                </Button>
+                <Link href="/about">
+                  <Button
+                    size="lg"
+                    className="bg-accent hover:bg-accent/90 text-accent-foreground group transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-accent/25 relative overflow-hidden"
+                  >
+                    <span className="relative z-10">Learn More About AIG</span>
+                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform relative z-10" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+                  </Button>
+                </Link>
                 <Button
                   size="lg"
                   variant="outline"
@@ -222,10 +224,10 @@ export default function HomePage() {
                   <BookOpen className="h-6 w-6 text-accent group-hover:scale-110 transition-transform duration-300" />
                 </div>
                 <h3 className="text-lg font-semibold text-foreground group-hover:text-accent transition-colors duration-300">
-                  Five Asset Classes
+                  Six Asset Classes
                 </h3>
                 <p className="text-sm text-muted-foreground text-pretty group-hover:text-foreground transition-colors duration-300">
-                  Comprehensive education covering private equity, private credit, hedge funds, venture capital, and real estate.
+                  Comprehensive education covering private equity, private credit, hedge funds, venture capital, real estate, and secondaries.
                 </p>
               </CardContent>
             </Card>

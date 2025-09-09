@@ -51,8 +51,8 @@ const FEATURES: Feature[] = [
   },
   {
     icon: Target,
-    title: "Five Asset Classes",
-    description: "Comprehensive education covering the five main alternative asset classes: private equity, private credit, hedge funds, venture capital, and real estate.",
+    title: "Six Asset Classes",
+    description: "Comprehensive education covering the six main alternative asset classes: private equity, private credit, hedge funds, venture capital, real estate, and secondaries.",
   },
   {
     icon: Calendar,
@@ -93,7 +93,7 @@ export default function AboutPage(): JSX.Element {
                 </span>
               </h1>
               <p className="text-xl text-muted-foreground text-pretty">
-                The Alternative Investments Group (AIG) is a premiere student organization focused on educating underclassmen about the five main alternative asset classes in high finance: private equity, private credit, hedge funds, venture capital, and real estate.
+                The Alternative Investments Group (AIG) is a premiere student organization focused on educating underclassmen about the six main alternative asset classes in high finance: private equity, private credit, hedge funds, venture capital, real estate, and secondaries.
               </p>
               <div className="flex items-center gap-8 pt-4">
                 {STATS.map((stat, index) => (
@@ -213,7 +213,7 @@ export default function AboutPage(): JSX.Element {
                 The Alternative Investments Group at Michigan State University has established itself as a premiere student organization focused on educating underclassmen about alternative investments. Our members have secured internships and positions at top-tier firms including Deloitte, Merrill Lynch, and other leading financial institutions.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                Through our weekly meetings and bi-weekly industry professional presentations, we provide members with direct access to alumni networks and real-world insights into the alternative investment landscape. Our focus on the five main asset classes - private equity, private credit, hedge funds, venture capital, and real estate - ensures comprehensive coverage of the industry.
+                Through our weekly meetings and bi-weekly industry professional presentations, we provide members with direct access to alumni networks and real-world insights into the alternative investment landscape. Our focus on the six main asset classes - private equity, private credit, hedge funds, venture capital, real estate, and secondaries - ensures comprehensive coverage of the industry.
               </p>
               <p className="text-muted-foreground leading-relaxed">
                 Today, AIG MSU continues to bridge the gap between academic learning and practical industry experience, preparing our members for successful careers in alternative investments and high finance.
