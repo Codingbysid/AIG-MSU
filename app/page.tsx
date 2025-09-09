@@ -197,7 +197,7 @@ export default function HomePage() {
                   Weekly Meetings
                 </h3>
                 <p className="text-sm text-muted-foreground text-pretty group-hover:text-foreground transition-colors duration-300">
-                  Regular meetings with bi-weekly presentations from industry professionals and alumni network connections.
+                  Regular meetings with presentations from industry professionals and alumni network connections.
                 </p>
               </CardContent>
             </Card>
@@ -242,7 +242,7 @@ export default function HomePage() {
                   Industry Presentations
                 </h3>
                 <p className="text-sm text-muted-foreground text-pretty group-hover:text-foreground transition-colors duration-300">
-                  Bi-weekly presentations from industry professionals providing networking and internship opportunities.
+                  Presentations from industry professionals providing networking and internship opportunities.
                 </p>
               </CardContent>
             </Card>

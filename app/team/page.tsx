@@ -127,13 +127,12 @@ export default function TeamPage(): JSX.Element {
             Want to Join Our <span className="gradient-text">Leadership Team?</span>
           </h2>
           <p className="text-lg text-muted-foreground text-pretty animate-fade-in-up delay-200">
-            We're always looking for passionate and dedicated students to help lead AIG MSU. Leadership positions become
-            available each academic year.
+            We're always looking for passionate and dedicated students to help lead AIG MSU. This semester, we have exciting opportunities for sector heads and sector analysts.
           </p>
           <div className="space-y-4 animate-fade-in-up delay-400">
             <div className="bg-card/80 backdrop-blur-sm rounded-lg p-6 border border-border/50 max-w-2xl mx-auto">
               <p className="text-muted-foreground mb-4">
-                Applications typically open in the spring semester for the following academic year.
+                Applications for sector head and sector analyst positions are now open for this semester.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <div className="bg-primary/10 rounded-lg p-4 flex-1">
@@ -145,11 +144,11 @@ export default function TeamPage(): JSX.Element {
                   </ul>
                 </div>
                 <div className="bg-accent/10 rounded-lg p-4 flex-1">
-                  <h4 className="font-semibold text-accent mb-2">Requirements</h4>
+                  <h4 className="font-semibold text-accent mb-2">Current Openings</h4>
                   <ul className="text-sm text-muted-foreground space-y-1">
-                    <li>• Active member for 1+ semester</li>
-                    <li>• Strong academic standing</li>
-                    <li>• Leadership experience</li>
+                    <li>• Sector Head positions</li>
+                    <li>• Sector Analyst roles</li>
+                    <li>• Strong academic standing required</li>
                   </ul>
                 </div>
               </div>

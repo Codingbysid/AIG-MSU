@@ -42,7 +42,7 @@ const FEATURES: Feature[] = [
   {
     icon: Award,
     title: "Weekly Meetings",
-    description: "AIG meets weekly and utilizes the alumni network to host bi-weekly presentations from industry professionals which contributes to networking and internship opportunities.",
+    description: "AIG meets weekly and utilizes the alumni network to host presentations from industry professionals which contributes to networking and internship opportunities.",
   },
   {
     icon: Users,
@@ -62,7 +62,7 @@ const FEATURES: Feature[] = [
   {
     icon: Building2,
     title: "Guest Speakers",
-    description: "Bi-weekly presentations from industry professionals and alumni working at leading financial institutions, providing real-world insights and career guidance.",
+    description: "Presentations from industry professionals and alumni working at leading financial institutions, providing real-world insights and career guidance.",
   },
   {
     icon: TrendingUp,
@@ -213,7 +213,7 @@ export default function AboutPage(): JSX.Element {
                 The Alternative Investments Group at Michigan State University has established itself as a premiere student organization focused on educating underclassmen about alternative investments. Our members have secured internships and positions at top-tier firms including Deloitte, Merrill Lynch, and other leading financial institutions.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                Through our weekly meetings and bi-weekly industry professional presentations, we provide members with direct access to alumni networks and real-world insights into the alternative investment landscape. Our focus on the six main asset classes - private equity, private credit, hedge funds, venture capital, real estate, and secondaries - ensures comprehensive coverage of the industry.
+                Through our weekly meetings and industry professional presentations, we provide members with direct access to alumni networks and real-world insights into the alternative investment landscape. Our focus on the six main asset classes - private equity, private credit, hedge funds, venture capital, real estate, and secondaries - ensures comprehensive coverage of the industry.
               </p>
               <p className="text-muted-foreground leading-relaxed">
                 Today, AIG MSU continues to bridge the gap between academic learning and practical industry experience, preparing our members for successful careers in alternative investments and high finance.
