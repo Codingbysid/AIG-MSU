@@ -44,7 +44,7 @@ const teamMembers: TeamMember[] = [
       achievements: "Blockchain Research Assistant",
     },
     {
-      name: "TBD",
+      name: "Siddharth Gupta",
       position: "Director of Marketing",
       year: "Junior",
       major: "Computer Science",
@@ -53,7 +53,7 @@ const teamMembers: TeamMember[] = [
       achievements: "Digital Marketing Certification",
     },
     {
-      name: "TBD",
+      name: "Aryash Sampat",
       position: "Social Media Chair",
       year: "Freshman",
       major: "Computer Science",
