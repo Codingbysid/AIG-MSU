@@ -1,5 +1,6 @@
 "use client"
 
+import React, { useState, useEffect, useRef, Suspense } from 'react'
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
@@ -7,10 +8,41 @@ import { Card, CardContent } from "@/components/ui/card"
 import { TrendingUp, Users, BookOpen, Calendar, ArrowRight } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
+import Spline3D from '@/components/ui/Spline'
 
 export default function HomePage() {
+  const [splineObject, setSplineObject] = useState<any>(null);
+  const splineRef = useRef<any>();
+
+  function onLoad(spline: any) {
+    const obj = spline.findObjectByName('Dollar');
+    setSplineObject(obj);
+    splineRef.current = spline;
+  }
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (splineObject) {
+        // The rotation will be a function of the scroll position.
+        // Adjust the multiplier to control the rotation speed.
+        const rotation = window.scrollY * 0.01;
+        splineObject.rotation.y = rotation;
+        splineObject.rotation.x = rotation * 0.5;
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [splineObject]);
+
   return (
     <div className="min-h-screen bg-background">
+      <Suspense fallback={<div>Loading 3D...</div>}>
+        <Spline3D onLoad={onLoad} ref={splineRef} />
+      </Suspense>
       <Navigation />
 
       {/* Hero Section */}
