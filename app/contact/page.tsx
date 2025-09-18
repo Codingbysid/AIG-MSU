@@ -1,212 +1,171 @@
-import React from 'react'
-import { Section } from '@/components/section'
-import { Mail, MapPin, Phone, Calendar, Users, MessageSquare } from 'lucide-react'
+import { Navigation } from "@/components/navigation"
+import { Footer } from "@/components/footer"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
+import { Label } from "@/components/ui/label"
+import { Mail, MapPin, Clock, Users } from "lucide-react"
 
-export default function ContactPage(): JSX.Element {
+export default function ContactPage() {
   return (
     <div className="min-h-screen bg-background">
+      <Navigation />
+
       {/* Hero Section */}
-      <Section className="pt-20 pb-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Contact Us
-            </h1>
-            <p className="text-xl text-muted-foreground">
-              Get in touch with the Alternative Investments Group
-            </p>
-          </div>
+      <section className="py-20 bg-gradient-to-br from-muted to-background">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-foreground text-balance">
+            Get In <span className="text-accent">Touch</span>
+          </h1>
+          <p className="text-xl text-muted-foreground text-pretty">
+            Ready to join AIG MSU or have questions about alternative investments? We'd love to hear from you.
+          </p>
         </div>
-      </Section>
+      </section>
 
-      {/* Contact Information */}
-      <Section className="py-16">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Contact Content */}
+      <section className="py-20 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Details */}
-            <div>
-              <h2 className="text-3xl font-bold text-foreground mb-8">Get In Touch</h2>
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Mail className="h-6 w-6 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-foreground mb-1">Email</h3>
-                    <p className="text-muted-foreground">aig@msu.edu</p>
-                    <p className="text-sm text-muted-foreground">We'll respond within 24 hours</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <MapPin className="h-6 w-6 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-foreground mb-1">Location</h3>
-                    <p className="text-muted-foreground">Michigan State University</p>
-                    <p className="text-sm text-muted-foreground">East Lansing, MI 48824</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Calendar className="h-6 w-6 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-foreground mb-1">Meetings</h3>
-                    <p className="text-muted-foreground">Every Tuesday at 7:00 PM</p>
-                    <p className="text-sm text-muted-foreground">Room 120, Business College Complex</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Users className="h-6 w-6 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-foreground mb-1">Membership</h3>
-                    <p className="text-muted-foreground">Open to all MSU students</p>
-                    <p className="text-sm text-muted-foreground">No prior experience required</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
             {/* Contact Form */}
-            <div>
-              <div className="bg-card/50 backdrop-blur-sm rounded-lg p-8 border border-border/50">
-                <h3 className="text-2xl font-bold text-foreground mb-6">Send us a message</h3>
-                <form className="space-y-6">
+            <Card className="border-border">
+              <CardHeader>
+                <CardTitle className="text-2xl font-bold text-foreground">Send Us a Message</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-6">
+                <form className="space-y-4">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div>
-                      <label htmlFor="firstName" className="block text-sm font-medium text-foreground mb-2">
+                    <div className="space-y-2">
+                      <Label htmlFor="firstName" className="text-foreground">
                         First Name
-                      </label>
-                      <input
-                        type="text"
+                      </Label>
+                      <Input
                         id="firstName"
-                        name="firstName"
-                        className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-background text-foreground"
-                        placeholder="John"
+                        placeholder="Enter your first name"
+                        className="border-border focus:ring-accent"
                       />
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="lastName" className="text-foreground">
+                        Last Name
+                      </Label>
+                      <Input
+                        id="lastName"
+                        placeholder="Enter your last name"
+                        className="border-border focus:ring-accent"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="email" className="text-foreground">
+                      Email
+                    </Label>
+                    <Input
+                      id="email"
+                      type="email"
+                      placeholder="Enter your email address"
+                      className="border-border focus:ring-accent"
+                    />
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="year" className="text-foreground">
+                      Academic Year
+                    </Label>
+                    <Input
+                      id="year"
+                      placeholder="e.g., Sophomore, Junior, Senior"
+                      className="border-border focus:ring-accent"
+                    />
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="message" className="text-foreground">
+                      Message
+                    </Label>
+                    <Textarea
+                      id="message"
+                      placeholder="Tell us about your interest in AIG MSU or ask any questions..."
+                      rows={5}
+                      className="border-border focus:ring-accent"
+                    />
+                  </div>
+
+                  <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">Send Message</Button>
+                </form>
+              </CardContent>
+            </Card>
+
+            {/* Contact Information */}
+            <div className="space-y-8">
+              <Card className="border-border">
+                <CardContent className="p-6 space-y-6">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Mail className="h-5 w-5 text-accent" />
                     </div>
                     <div>
-                      <label htmlFor="lastName" className="block text-sm font-medium text-foreground mb-2">
-                        Last Name
-                      </label>
-                      <input
-                        type="text"
-                        id="lastName"
-                        name="lastName"
-                        className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-background text-foreground"
-                        placeholder="Doe"
-                      />
+                      <h3 className="text-lg font-semibold text-foreground">Email Us</h3>
+                      <p className="text-muted-foreground">aigmsu@gmail.com</p>
+                      <p className="text-sm text-muted-foreground mt-1">We typically respond within 24-48 hours</p>
                     </div>
                   </div>
 
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-background text-foreground"
-                      placeholder="john.doe@msu.edu"
-                    />
+                  <div className="flex items-start space-x-4">
+                    <div className="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <MapPin className="h-5 w-5 text-accent" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-foreground">Location</h3>
+                      <p className="text-muted-foreground">Michigan State University</p>
+                      <p className="text-muted-foreground">East Lansing, MI 48823</p>
+                    </div>
                   </div>
 
-                  <div>
-                    <label htmlFor="subject" className="block text-sm font-medium text-foreground mb-2">
-                      Subject
-                    </label>
-                    <input
-                      type="text"
-                      id="subject"
-                      name="subject"
-                      className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-background text-foreground"
-                      placeholder="Membership inquiry"
-                    />
+                  <div className="flex items-start space-x-4">
+                    <div className="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Clock className="h-5 w-5 text-accent" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-foreground">Meeting Times</h3>
+                      <p className="text-muted-foreground">Wednesdays at 7:00 PM</p>
+                      <p className="text-sm text-muted-foreground mt-1">Location details sent via email</p>
+                    </div>
                   </div>
 
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
-                      Message
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      rows={4}
-                      className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-background text-foreground"
-                      placeholder="Tell us about your interest in AIG..."
-                    />
+                  <div className="flex items-start space-x-4">
+                    <div className="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Users className="h-5 w-5 text-accent" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-foreground">Membership</h3>
+                      <p className="text-muted-foreground">Open to all MSU students</p>
+                      <p className="text-sm text-muted-foreground mt-1">All majors and experience levels welcome</p>
+                    </div>
                   </div>
+                </CardContent>
+              </Card>
 
-                  <button
-                    type="submit"
-                    className="w-full bg-primary text-primary-foreground py-3 px-6 rounded-lg hover:bg-primary/90 transition-colors font-medium"
-                  >
-                    <MessageSquare className="inline h-4 w-4 mr-2" />
-                    Send Message
-                  </button>
-                </form>
-              </div>
+              <Card className="border-border bg-muted">
+                <CardContent className="p-6 space-y-4">
+                  <h3 className="text-lg font-semibold text-foreground">Ready to Join?</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    Interested in learning more about alternative investments? Come to one of our weekly meetings or
+                    reach out via email. We welcome students from all backgrounds and experience levels.
+                  </p>
+                  <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">
+                    Join AIG MSU Today
+                  </Button>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </div>
-      </Section>
+      </section>
 
-      {/* FAQ Section */}
-      <Section className="py-16 bg-muted/30">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-foreground mb-4">Frequently Asked Questions</h2>
-            <p className="text-lg text-muted-foreground">
-              Common questions about joining AIG MSU
-            </p>
-          </div>
-          <div className="space-y-6">
-            <div className="bg-card/50 backdrop-blur-sm rounded-lg p-6 border border-border/50">
-              <h3 className="text-lg font-semibold text-foreground mb-2">
-                Do I need prior experience in finance or investments?
-              </h3>
-              <p className="text-muted-foreground">
-                No prior experience is required! We welcome students from all majors and backgrounds. 
-                Our programs are designed to teach you everything you need to know about alternative investments.
-              </p>
-            </div>
-            <div className="bg-card/50 backdrop-blur-sm rounded-lg p-6 border border-border/50">
-              <h3 className="text-lg font-semibold text-foreground mb-2">
-                How often does AIG meet?
-              </h3>
-              <p className="text-muted-foreground">
-                We meet every Tuesday at 7:00 PM in Room 120 of the Business College Complex. 
-                Meetings typically last 1-2 hours and include educational content, guest speakers, and networking opportunities.
-              </p>
-            </div>
-            <div className="bg-card/50 backdrop-blur-sm rounded-lg p-6 border border-border/50">
-              <h3 className="text-lg font-semibold text-foreground mb-2">
-                What are the membership requirements?
-              </h3>
-              <p className="text-muted-foreground">
-                Membership is open to all Michigan State University students. We ask that members attend 
-                meetings regularly and participate in our educational programs and portfolio management activities.
-              </p>
-            </div>
-            <div className="bg-card/50 backdrop-blur-sm rounded-lg p-6 border border-border/50">
-              <h3 className="text-lg font-semibold text-foreground mb-2">
-                How can I get involved in portfolio management?
-              </h3>
-              <p className="text-muted-foreground">
-                After joining AIG, you can apply to be part of our portfolio management team. We provide 
-                training and mentorship to help you develop the skills needed to manage real investment portfolios.
-              </p>
-            </div>
-          </div>
-        </div>
-      </Section>
+      <Footer />
     </div>
   )
 }
