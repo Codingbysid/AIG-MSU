@@ -35,7 +35,9 @@ export function Footer() {
                     <Linkedin className="h-5 w-5" />
                   </Link>
                   <Link
-                    href="#"
+                    href="https://www.instagram.com/aig_msu/"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-muted-foreground hover:text-accent transition-all-spring hover:scale-110 micro-interaction"
                   >
                     <Instagram className="h-5 w-5" />
