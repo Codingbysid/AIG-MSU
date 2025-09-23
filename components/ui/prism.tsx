@@ -64,7 +64,7 @@ const Prism = ({
       height: '100%',
       display: 'block'
     });
-    container.appendChild(gl.canvas);
+    (container as HTMLElement).appendChild(gl.canvas);
 
     const vertex = /* glsl */ `
       attribute vec2 position;
@@ -225,8 +225,8 @@ const Prism = ({
     const mesh = new Mesh(gl, { geometry, program });
 
     const resize = () => {
-      const w = container.clientWidth || 1;
-      const h = container.clientHeight || 1;
+      const w = (container as HTMLElement).clientWidth || 1;
+      const h = (container as HTMLElement).clientHeight || 1;
       renderer.setSize(w, h);
       iResBuf[0] = gl.drawingBufferWidth;
       iResBuf[1] = gl.drawingBufferHeight;
@@ -235,11 +235,11 @@ const Prism = ({
       program.uniforms.uPxScale.value = 1 / ((gl.drawingBufferHeight || 1) * 0.1 * SCALE);
     };
     const ro = new ResizeObserver(resize);
-    ro.observe(container);
+    ro.observe(container as HTMLElement);
     resize();
 
     const rotBuf = new Float32Array(9);
-    const setMat3FromEuler = (yawY, pitchX, rollZ, out) => {
+    const setMat3FromEuler = (yawY: number, pitchX: number, rollZ: number, out: Float32Array) => {
       const cy = Math.cos(yawY),
         sy = Math.sin(yawY);
       const cx = Math.cos(pitchX),
@@ -295,10 +295,10 @@ const Prism = ({
       roll = 0;
     let targetYaw = 0,
       targetPitch = 0;
-    const lerp = (a, b, t) => a + (b - a) * t;
+    const lerp = (a: number, b: number, t: number) => a + (b - a) * t;
 
     const pointer = { x: 0, y: 0, inside: true };
-    const onMove = e => {
+    const onMove = (e: MouseEvent) => {
       const ww = Math.max(1, window.innerWidth);
       const wh = Math.max(1, window.innerHeight);
       const cx = ww * 0.5;
@@ -318,7 +318,7 @@ const Prism = ({
 
     let onPointerMove = null;
     if (animationType === 'hover') {
-      onPointerMove = e => {
+      onPointerMove = (e: MouseEvent) => {
         onMove(e);
         startRAF();
       };
@@ -332,7 +332,7 @@ const Prism = ({
       program.uniforms.uUseBaseWobble.value = 1;
     }
 
-    const render = t => {
+    const render = (t: number) => {
       const time = (t - t0) * 0.001;
       program.uniforms.iTime.value = time;
 
@@ -393,7 +393,7 @@ const Prism = ({
       });
       io.observe(container);
       startRAF();
-      container.__prismIO = io;
+      (container as any).__prismIO = io;
     } else {
       startRAF();
     }
@@ -407,11 +407,11 @@ const Prism = ({
         window.removeEventListener('blur', onBlur);
       }
       if (suspendWhenOffscreen) {
-        const io = container.__prismIO;
+        const io = (container as any).__prismIO;
         if (io) io.disconnect();
-        delete container.__prismIO;
+        delete (container as any).__prismIO;
       }
-      if (gl.canvas.parentElement === container) container.removeChild(gl.canvas);
+      if (gl.canvas.parentElement === container) (container as HTMLElement).removeChild(gl.canvas);
     };
   }, [
     height,

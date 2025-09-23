@@ -26,3 +26,9 @@ export interface TeamMember {
   linkedin?: string
   email?: string
 }
+
+export interface SectionProps {
+  children: React.ReactNode
+  className?: string
+  id?: string
+}

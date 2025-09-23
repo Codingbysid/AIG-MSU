@@ -17,11 +17,12 @@ export function useAdvancedScrollAnimation({
   triggerOnce = true,
   animationType = 'fadeIn',
   delay = 0,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   duration = 0.6
 }: UseAdvancedScrollAnimationOptions = {}) {
   const [isVisible, setIsVisible] = useState(false)
   const [hasTriggered, setHasTriggered] = useState(false)
-  const elementRef = useRef<HTMLElement>(null)
+  const elementRef = useRef<HTMLElement | null>(null)
 
   useEffect(() => {
     const element = elementRef.current

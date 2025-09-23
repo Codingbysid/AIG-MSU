@@ -49,6 +49,7 @@ interface CounterCardProps {
   icon?: React.ReactNode
   delay?: number
   className?: string
+  suffix?: string
 }
 
 export function CounterCard({ 
@@ -56,7 +57,8 @@ export function CounterCard({
   label, 
   icon, 
   delay = 0,
-  className 
+  className,
+  suffix = ''
 }: CounterCardProps) {
   const { ref, isVisible } = useScrollAnimation({ 
     triggerOnce: true, 
@@ -65,7 +67,7 @@ export function CounterCard({
 
   return (
     <div
-      ref={ref}
+      ref={ref as React.RefObject<HTMLDivElement>}
       className={cn(
         'text-center group transition-all duration-500',
         'hover:scale-110 cursor-pointer p-6 rounded-xl',
@@ -80,7 +82,7 @@ export function CounterCard({
         </div>
       )}
       <div className="text-3xl md:text-4xl font-bold text-accent mb-2 group-hover:animate-bounce">
-        <AnimatedCounter end={value} delay={delay} />
+        <AnimatedCounter end={value} delay={delay} suffix={suffix} />
       </div>
       <p className="text-sm text-muted-foreground group-hover:text-accent transition-colors duration-300">
         {label}

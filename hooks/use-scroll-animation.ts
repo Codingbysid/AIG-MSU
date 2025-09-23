@@ -19,7 +19,7 @@ export function useScrollAnimation(options: UseScrollAnimationOptions = {}) {
 
   const [isVisible, setIsVisible] = useState(false)
   const [hasTriggered, setHasTriggered] = useState(false)
-  const ref = useRef<HTMLElement>(null)
+  const ref = useRef<HTMLElement | null>(null)
 
   useEffect(() => {
     const element = ref.current

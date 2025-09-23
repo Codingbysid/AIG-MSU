@@ -4,7 +4,6 @@ import Link from "next/link"
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
-import { useScrollAnimation } from "@/hooks/use-scroll-animation"
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
