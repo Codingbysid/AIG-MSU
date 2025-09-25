@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button"
 import { GlassCard, GlassCardContent } from "@/components/ui/glass-card"
 import { AnimatedCounter, CounterCard } from "@/components/ui/animated-counter"
 import CircularGallery from "@/components/ui/circular-gallery"
-import Prism from "@/components/ui/prism"
+import DarkVeil from "@/components/ui/dark-veil"
 import { TrendingUp, Users, BookOpen, Calendar, ArrowRight, Award } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
@@ -54,21 +54,16 @@ export default function HomePage() {
           <div className="absolute top-1/2 right-10 w-12 h-12 bg-gradient-to-r from-accent/30 to-primary/30 rounded-full animate-bounce delay-3000"></div>
         </div>
 
-        {/* Prism Background */}
+        {/* DarkVeil Background */}
         <div className="absolute inset-0 w-full h-full">
-          <Prism
-            animationType="3drotate"
-            timeScale={0.3}
-            height={3.5}
-            baseWidth={5.5}
-            scale={2.8}
+          <DarkVeil
             hueShift={0}
-            colorFrequency={1.2}
-            noise={0.3}
-            glow={0.8}
-            transparent={true}
-            bloom={1.2}
-            suspendWhenOffscreen={true}
+            noiseIntensity={0.02}
+            scanlineIntensity={0.1}
+            speed={0.3}
+            scanlineFrequency={2.0}
+            warpAmount={0.3}
+            resolutionScale={1}
           />
         </div>
         
@@ -481,21 +476,16 @@ export default function HomePage() {
 
       {/* CTA Section */}
       <section className="py-20 relative overflow-hidden">
-        {/* Prism Background */}
+        {/* DarkVeil Background */}
         <div className="absolute inset-0 w-full h-full">
-          <Prism
-            animationType="rotate"
-            timeScale={0.2}
-            height={2.5}
-            baseWidth={4.0}
-            scale={1.8}
-            hueShift={0.5}
-            colorFrequency={0.8}
-            noise={0.2}
-            glow={0.6}
-            transparent={true}
-            bloom={0.8}
-            suspendWhenOffscreen={true}
+          <DarkVeil
+            hueShift={180}
+            noiseIntensity={0.03}
+            scanlineIntensity={0.15}
+            speed={0.4}
+            scanlineFrequency={1.5}
+            warpAmount={0.4}
+            resolutionScale={1}
           />
         </div>
         
