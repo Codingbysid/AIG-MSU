@@ -142,7 +142,7 @@ export default function ContactPage() {
                     <div>
                   <h3 className="text-lg font-semibold text-foreground">Membership</h3>
                   <p className="text-muted-foreground">Open to all MSU students</p>
-                  <p className="text-sm text-muted-foreground mt-1">$30/semester or $65/yearly • All majors welcome</p>
+                  <p className="text-sm text-muted-foreground mt-1">$40/semester or $65/yearly • All majors welcome</p>
                     </div>
                   </div>
                 </CardContent>

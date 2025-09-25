@@ -266,7 +266,7 @@ export default function HomePage() {
                 </div>
                 <div className="space-y-3">
                   <div className="text-center p-4 bg-accent/5 rounded-lg">
-                    <p className="text-2xl font-bold text-accent">$30</p>
+                    <p className="text-2xl font-bold text-accent">$40</p>
                     <p className="text-sm text-muted-foreground">Per Semester</p>
                   </div>
                   <div className="text-center p-4 bg-accent/5 rounded-lg">
@@ -295,12 +295,12 @@ export default function HomePage() {
               </div>
                 <div className="space-y-3">
                   <p className="text-muted-foreground text-sm">
-                    AIG is considering organizing a roadshow with dedicated members to provide great opportunities for collaboration.
+                    AIG is organizing its own roadshow with dedicated members to provide great opportunities for professional development and networking.
                   </p>
                   <div className="space-y-2">
-                    <p className="text-sm font-medium text-foreground">Collaboration with:</p>
-                    <p className="text-sm text-muted-foreground">• SIA/FA (similar to past LA roadshow)</p>
-                    <p className="text-sm text-muted-foreground">• Financial Markets & Institutions (FMI)</p>
+                    <p className="text-sm font-medium text-foreground">Roadshow includes:</p>
+                    <p className="text-sm text-muted-foreground">• Professional networking opportunities</p>
+                    <p className="text-sm text-muted-foreground">• Industry visits and presentations</p>
                   </div>
                   <div className="space-y-2">
                     <p className="text-sm font-medium text-foreground">Participation includes:</p>
@@ -330,7 +330,7 @@ export default function HomePage() {
                   <div className="space-y-2">
                     <p className="text-sm font-medium text-foreground">Upcoming Events:</p>
                     <ul className="text-xs text-muted-foreground space-y-1">
-                      <li>• Alcohol-free Hayride</li>
+                      <li>• Hayride</li>
                       <li>• Community Outreach/Volunteering</li>
                       <li>• Cultural Enhancement Training</li>
                       <li>• Group Dinners</li>
