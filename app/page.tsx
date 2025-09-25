@@ -5,7 +5,7 @@ import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { GlassCard, GlassCardContent } from "@/components/ui/glass-card"
 import { AnimatedCounter, CounterCard } from "@/components/ui/animated-counter"
-import { InteractiveGallery } from "@/components/ui/interactive-gallery"
+import CircularGallery from "@/components/ui/circular-gallery"
 import Prism from "@/components/ui/prism"
 import { TrendingUp, Users, BookOpen, Calendar, ArrowRight, Award } from "lucide-react"
 import Link from "next/link"
@@ -14,22 +14,28 @@ import Image from "next/image"
 export default function HomePage() {
   const galleryItems = [
     {
-      src: "/team-photo-1.jpeg",
-      alt: "AIG Meeting",
-      title: "Weekly Meetings",
-      description: "Our regular Thursday meetings where members engage in educational sessions and discussions about alternative investments"
+      image: "/team-photo-1.jpeg",
+      text: "Weekly Meetings"
     },
     {
-      src: "/team-photo-4.jpeg",
-      alt: "AIG Networking",
-      title: "Professional Networking",
-      description: "Members engaging in networking opportunities and building valuable connections in the finance industry"
+      image: "/team-photo-4.jpeg",
+      text: "Professional Networking"
     },
     {
-      src: "/social-event-dinner.png",
-      alt: "AIG Social Event",
-      title: "Social Events",
-      description: "Building community through social activities and strengthening bonds among AIG members"
+      image: "/social-event-dinner.png",
+      text: "Social Events"
+    },
+    {
+      image: "/team-photo-2.jpeg",
+      text: "Educational Workshops"
+    },
+    {
+      image: "/team-photo-3.jpeg",
+      text: "Industry Connections"
+    },
+    {
+      image: "/team-photo-5.jpeg",
+      text: "Team Building"
     }
   ]
 
@@ -447,11 +453,29 @@ export default function HomePage() {
               Experience AIG MSU
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-              Get a glimpse into our events, workshops, and community activities
+              Scroll through our interactive gallery to see our events, workshops, and community activities
             </p>
           </div>
 
-          <InteractiveGallery items={galleryItems} />
+          {/* Circular Gallery Container */}
+          <div className="h-96 md:h-[500px] lg:h-[600px] w-full rounded-2xl overflow-hidden border border-border/20 shadow-2xl">
+            <CircularGallery 
+              items={galleryItems}
+              bend={3}
+              textColor="#ffffff"
+              borderRadius={0.05}
+              font="bold 24px Inter, sans-serif"
+              scrollSpeed={2}
+              scrollEase={0.05}
+            />
+          </div>
+          
+          {/* Instructions */}
+          <div className="text-center mt-8">
+            <p className="text-sm text-muted-foreground">
+              Use your mouse wheel or drag to scroll through the gallery
+            </p>
+          </div>
         </div>
       </section>
 
