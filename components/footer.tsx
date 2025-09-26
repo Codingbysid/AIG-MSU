@@ -20,8 +20,17 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Logo and Description */}
           <div className="space-y-4 animate-fade-in-up">
-            <div className="text-2xl font-bold text-foreground">
-              AIG<span className="text-gradient">MSU</span>
+            <div className="flex items-center space-x-3">
+              <img
+                src="/aig-logo.jpg"
+                alt="AIG MSU Logo"
+                width={50}
+                height={50}
+                className="rounded-lg"
+              />
+              <div className="text-2xl font-bold text-foreground">
+                AIG<span className="text-gradient">MSU</span>
+              </div>
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed">
               The Alternative Investments Group at Michigan State University. Empowering students with knowledge and

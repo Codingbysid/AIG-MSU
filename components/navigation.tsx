@@ -35,7 +35,14 @@ export function Navigation() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2 group">
-            <div className="text-2xl font-bold text-foreground group-hover:text-accent transition-colors duration-300">
+            <img
+              src="/aig-logo.jpg"
+              alt="AIG MSU Logo"
+              width={40}
+              height={40}
+              className="rounded-lg group-hover:scale-105 transition-transform duration-300"
+            />
+            <div className="text-xl font-bold text-foreground group-hover:text-accent transition-colors duration-300">
               AIG<span className="text-gradient">MSU</span>
             </div>
           </Link>
