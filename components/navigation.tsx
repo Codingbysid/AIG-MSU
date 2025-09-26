@@ -4,6 +4,7 @@ import Link from "next/link"
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
+import Image from "next/image"
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -35,12 +36,13 @@ export function Navigation() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2 group">
-            <img
-              src="/logo.jpg"
+            <Image
+              src="/aig-msu-logo.jpg"
               alt="AIG MSU Logo"
               width={40}
               height={40}
               className="rounded-lg group-hover:scale-105 transition-transform duration-300"
+              priority
             />
             <div className="text-xl font-bold text-foreground group-hover:text-accent transition-colors duration-300">
               AIG<span className="text-gradient">MSU</span>

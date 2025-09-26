@@ -495,8 +495,8 @@ export default function HomePage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8 relative z-10 animate-fade-in-up">
           {/* AIG MSU Logo */}
           <div className="flex justify-center mb-4">
-            <img
-              src="/logo.jpg"
+            <Image
+              src="/aig-msu-logo.jpg"
               alt="AIG MSU Logo"
               width={120}
               height={120}
