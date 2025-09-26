@@ -493,10 +493,20 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-br from-muted/40 via-background/20 to-muted/40"></div>
 
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8 relative z-10 animate-fade-in-up">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground text-balance text-gradient">
+          {/* AIG MSU Logo */}
+          <div className="flex justify-center mb-4">
+            <Image
+              src="/logo.jpg"
+              alt="AIG MSU Logo"
+              width={120}
+              height={120}
+              className="rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+            />
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-white text-balance">
             Ready to Join AIG MSU?
           </h2>
-          <p className="text-lg text-muted-foreground text-pretty">
+          <p className="text-lg text-white/90 text-pretty">
             Take the first step towards expanding your knowledge in alternative investments and building valuable
             connections in the finance industry.
           </p>
@@ -515,7 +525,7 @@ export default function HomePage() {
               <Button
                 size="lg"
                 variant="outline"
-                className="hover:scale-105 transition-all-spring bg-transparent hover:bg-accent/5 hover:border-accent/50 hover:shadow-lg hover:shadow-accent/10 micro-interaction border-gradient-accent"
+                className="hover:scale-105 transition-all-spring bg-transparent hover:bg-accent/5 hover:border-accent/50 hover:shadow-lg hover:shadow-accent/10 micro-interaction border-gradient-accent text-white border-white/30 hover:text-white hover:border-white/50"
               >
                 Sector Head/Analyst Form
               </Button>
