@@ -36,7 +36,7 @@ export function Navigation() {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2 group">
             <img
-              src="/aig-logo.jpg"
+              src="/logo.jpg"
               alt="AIG MSU Logo"
               width={40}
               height={40}

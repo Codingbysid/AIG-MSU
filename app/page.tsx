@@ -496,7 +496,7 @@ export default function HomePage() {
           {/* AIG MSU Logo */}
           <div className="flex justify-center mb-4">
             <img
-              src="/aig-logo.jpg"
+              src="/logo.jpg"
               alt="AIG MSU Logo"
               width={120}
               height={120}
