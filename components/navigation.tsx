@@ -36,15 +36,11 @@ export function Navigation() {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2 group">
             <img
-              src="/logo-simple.jpg"
+              src="/logo.jpg"
               alt="AIG MSU Logo"
               width={40}
               height={40}
               className="rounded-lg group-hover:scale-105 transition-transform duration-300"
-              onError={(e) => {
-                console.log('Logo failed to load, trying fallback');
-                e.currentTarget.src = '/logo-fallback.svg';
-              }}
             />
             <div className="text-xl font-bold text-foreground group-hover:text-accent transition-colors duration-300">
               AIG<span className="text-gradient">MSU</span>

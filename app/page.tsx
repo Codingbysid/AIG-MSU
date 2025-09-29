@@ -463,8 +463,8 @@ export default function HomePage() {
               scrollSpeed={2}
               scrollEase={0.05}
             />
-          </div>
-          
+            </div>
+
           {/* Instructions */}
           <div className="text-center mt-8">
             <p className="text-sm text-muted-foreground">
@@ -496,15 +496,11 @@ export default function HomePage() {
           {/* AIG MSU Logo */}
           <div className="flex justify-center mb-4">
             <img
-              src="/logo-simple.jpg"
+              src="/logo.jpg"
               alt="AIG MSU Logo"
               width={120}
               height={120}
               className="rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
-              onError={(e) => {
-                console.log('Logo failed to load, trying fallback');
-                e.currentTarget.src = '/logo.jpg';
-              }}
             />
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-white text-balance">

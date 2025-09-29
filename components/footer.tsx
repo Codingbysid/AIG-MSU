@@ -22,15 +22,11 @@ export function Footer() {
           <div className="space-y-4 animate-fade-in-up">
             <div className="flex items-center space-x-3">
               <img
-                src="/logo-simple.jpg"
+                src="/logo.jpg"
                 alt="AIG MSU Logo"
                 width={50}
                 height={50}
                 className="rounded-lg"
-                onError={(e) => {
-                  console.log('Logo failed to load, trying fallback');
-                  e.currentTarget.src = '/logo.jpg';
-                }}
               />
               <div className="text-2xl font-bold text-foreground">
                 AIG<span className="text-gradient">MSU</span>
