@@ -2,7 +2,6 @@
 
 import Link from "next/link"
 import { Mail, MapPin, Linkedin, Instagram, ArrowUp } from "lucide-react"
-import Image from "next/image"
 
 export function Footer() {
   const scrollToTop = () => {
@@ -22,12 +21,16 @@ export function Footer() {
           {/* Logo and Description */}
           <div className="space-y-4 animate-fade-in-up">
             <div className="flex items-center space-x-3">
-              <Image
-                src="/aig-msu-logo.jpg"
+              <img
+                src="/logo-simple.jpg"
                 alt="AIG MSU Logo"
                 width={50}
                 height={50}
                 className="rounded-lg"
+                onError={(e) => {
+                  console.log('Logo failed to load, trying fallback');
+                  e.currentTarget.src = '/logo.jpg';
+                }}
               />
               <div className="text-2xl font-bold text-foreground">
                 AIG<span className="text-gradient">MSU</span>

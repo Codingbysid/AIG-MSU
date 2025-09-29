@@ -495,12 +495,16 @@ export default function HomePage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8 relative z-10 animate-fade-in-up">
           {/* AIG MSU Logo */}
           <div className="flex justify-center mb-4">
-            <Image
-              src="/aig-msu-logo.jpg"
+            <img
+              src="/logo-simple.jpg"
               alt="AIG MSU Logo"
               width={120}
               height={120}
               className="rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+              onError={(e) => {
+                console.log('Logo failed to load, trying fallback');
+                e.currentTarget.src = '/logo.jpg';
+              }}
             />
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-white text-balance">
