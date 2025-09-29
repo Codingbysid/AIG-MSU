@@ -22,7 +22,7 @@ export function Footer() {
           <div className="space-y-4 animate-fade-in-up">
             <div className="flex items-center space-x-3">
               <img
-                src="/aig-logo-final.jpg?v=1"
+                src="/Main logo.png"
                 alt="AIG MSU Logo"
                 width={50}
                 height={50}

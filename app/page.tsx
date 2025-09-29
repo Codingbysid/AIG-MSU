@@ -75,11 +75,11 @@ export default function HomePage() {
                 <p className="text-sm font-medium text-accent uppercase tracking-wide animate-fade-in delay-200">
                   Michigan State University
                 </p>
-                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white text-balance animate-fade-in-up delay-300">
-                  Alternative <span className="text-accent font-bold">Investments</span> Group
+                <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white text-balance animate-fade-in-up delay-300">
+                  Alternative <span className="text-accent font-black">Investments</span> Group
                 </h1>
               </div>
-              <p className="text-xl text-white/90 max-w-2xl text-pretty animate-fade-in-up delay-500">
+              <p className="text-xl text-white max-w-2xl text-pretty animate-fade-in-up delay-500 font-medium">
                     Empowering students with knowledge and experience in alternative investment strategies that are not open to the public and require a large pool of private capital.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up delay-700">
@@ -273,6 +273,10 @@ export default function HomePage() {
                   <div className="text-center p-4 bg-accent/5 rounded-lg">
                     <p className="text-2xl font-bold text-accent">$65</p>
                     <p className="text-sm text-muted-foreground">Yearly Membership</p>
+                  </div>
+                  <div className="text-center p-4 bg-accent/5 rounded-lg">
+                    <p className="text-2xl font-bold text-accent">$80</p>
+                    <p className="text-sm text-muted-foreground">Lifetime Membership</p>
                   </div>
                   <div className="space-y-2">
                     <p className="text-sm font-medium text-foreground">Fees go towards:</p>
@@ -496,7 +500,7 @@ export default function HomePage() {
           {/* AIG MSU Logo */}
           <div className="flex justify-center mb-4">
             <img
-              src="/aig-logo-final.jpg?v=1"
+              src="/Main logo.png"
               alt="AIG MSU Logo"
               width={120}
               height={120}
