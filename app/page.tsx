@@ -7,6 +7,12 @@ import { GlassCard, GlassCardContent } from "@/components/ui/glass-card"
 import { AnimatedCounter, CounterCard } from "@/components/ui/animated-counter"
 import CircularGallery from "@/components/ui/circular-gallery"
 import DarkVeil from "@/components/ui/dark-veil"
+import dynamic from "next/dynamic"
+
+const Silk = dynamic(() => import("@/components/ui/silk"), {
+  ssr: false,
+  loading: () => <div className="absolute inset-0 bg-gradient-to-br from-purple-900 via-purple-800 to-purple-700" />
+})
 import { TrendingUp, Users, BookOpen, Calendar, ArrowRight, Award } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
@@ -45,17 +51,17 @@ export default function HomePage() {
       <main id="main-content">
 
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 overflow-hidden bg-gradient-to-br from-purple-900 via-purple-800 to-purple-700">
-        {/* Animated Background Elements */}
-        <div className="absolute inset-0 opacity-30">
-          <div className="absolute top-20 left-10 w-20 h-20 border border-purple-300/50 rounded-full animate-float delay-1000"></div>
-          <div className="absolute top-40 right-20 w-16 h-16 bg-purple-300/30 rounded-full animate-pulse-slow delay-500"></div>
-          <div className="absolute bottom-32 left-1/4 w-24 h-24 border border-purple-300/40 rotate-45 animate-spin-slow delay-2000"></div>
-          <div className="absolute top-1/2 right-10 w-12 h-12 bg-gradient-to-r from-purple-300/40 to-purple-200/40 rounded-full animate-bounce delay-3000"></div>
+      <section className="relative py-20 lg:py-32 overflow-hidden">
+        {/* Silk Background */}
+        <div className="absolute inset-0 w-full h-full">
+          <Silk
+            speed={5}
+            scale={1}
+            color="#7B7481"
+            noiseIntensity={1.5}
+            rotation={0}
+          />
         </div>
-
-        {/* Purple Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/80 via-purple-800/60 to-purple-700/80"></div>
         
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
