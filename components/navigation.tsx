@@ -28,8 +28,8 @@ export function Navigation() {
   return (
     <nav className={`sticky top-0 z-50 transition-all duration-300 ${
       scrolled 
-        ? 'bg-white/10 backdrop-blur-md border-b border-white/20 shadow-lg' 
-        : 'bg-white/5 backdrop-blur-sm border-b border-white/10'
+        ? 'bg-black/20 backdrop-blur-md border-b border-white/20 shadow-lg' 
+        : 'bg-black/10 backdrop-blur-sm border-b border-white/10'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
