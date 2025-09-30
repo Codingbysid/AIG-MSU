@@ -45,38 +45,28 @@ export default function HomePage() {
       <main id="main-content">
 
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 overflow-hidden">
+      <section className="relative py-20 lg:py-32 overflow-hidden bg-gradient-to-br from-purple-900 via-purple-800 to-purple-700">
         {/* Animated Background Elements */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-20 left-10 w-20 h-20 border border-accent/30 rounded-full animate-float delay-1000"></div>
-          <div className="absolute top-40 right-20 w-16 h-16 bg-accent/20 rounded-full animate-pulse-slow delay-500"></div>
-          <div className="absolute bottom-32 left-1/4 w-24 h-24 border border-accent/20 rotate-45 animate-spin-slow delay-2000"></div>
-          <div className="absolute top-1/2 right-10 w-12 h-12 bg-gradient-to-r from-accent/30 to-primary/30 rounded-full animate-bounce delay-3000"></div>
+        <div className="absolute inset-0 opacity-30">
+          <div className="absolute top-20 left-10 w-20 h-20 border border-purple-300/50 rounded-full animate-float delay-1000"></div>
+          <div className="absolute top-40 right-20 w-16 h-16 bg-purple-300/30 rounded-full animate-pulse-slow delay-500"></div>
+          <div className="absolute bottom-32 left-1/4 w-24 h-24 border border-purple-300/40 rotate-45 animate-spin-slow delay-2000"></div>
+          <div className="absolute top-1/2 right-10 w-12 h-12 bg-gradient-to-r from-purple-300/40 to-purple-200/40 rounded-full animate-bounce delay-3000"></div>
         </div>
 
-        {/* DarkVeil Background */}
-        <div className="absolute inset-0 w-full h-full">
-          <DarkVeil
-            hueShift={0}
-            noiseIntensity={0.02}
-            scanlineIntensity={0.1}
-            speed={0.3}
-            scanlineFrequency={2.0}
-            warpAmount={0.3}
-            resolutionScale={1}
-          />
-        </div>
+        {/* Purple Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/80 via-purple-800/60 to-purple-700/80"></div>
         
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8 animate-fade-in-up">
               <div className="space-y-4">
-                <p className="text-sm font-medium text-accent uppercase tracking-wide animate-fade-in delay-200">
+                <p className="text-sm font-medium text-purple-200 uppercase tracking-wide animate-fade-in delay-200">
                   Michigan State University
                 </p>
                 <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white text-balance animate-fade-in-up delay-300">
-                  Alternative <span className="text-accent font-black">Investments</span> Group
+                  Alternative <span className="text-purple-300 font-black">Investments</span> Group
                 </h1>
               </div>
               <p className="text-xl text-white max-w-2xl text-pretty animate-fade-in-up delay-500 font-medium">
