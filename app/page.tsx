@@ -55,10 +55,10 @@ export default function HomePage() {
         {/* Silk Background */}
         <div className="absolute inset-0 w-full h-full">
           <Silk
-            speed={5}
-            scale={1}
-            color="#7B7481"
-            noiseIntensity={1.5}
+            speed={7}
+            scale={1.2}
+            color="#4ade80"
+            noiseIntensity={1.6}
             rotation={0}
           />
         </div>
@@ -68,11 +68,11 @@ export default function HomePage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8 animate-fade-in-up">
               <div className="space-y-4">
-                <p className="text-sm font-medium text-purple-200 uppercase tracking-wide animate-fade-in delay-200">
+                <p className="text-sm font-medium text-green-200 uppercase tracking-wide animate-fade-in delay-200">
                   Michigan State University
                 </p>
                 <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white text-balance animate-fade-in-up delay-300">
-                  Alternative <span className="text-purple-300 font-black">Investments</span> Group
+                  Alternative <span className="text-green-300 font-black">Investments</span> Group
                 </h1>
               </div>
               <p className="text-xl text-white max-w-2xl text-pretty animate-fade-in-up delay-500 font-medium">
