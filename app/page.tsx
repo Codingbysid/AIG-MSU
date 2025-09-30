@@ -68,11 +68,11 @@ export default function HomePage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8 animate-fade-in-up">
               <div className="space-y-4">
-                <p className="text-sm font-medium text-green-200 uppercase tracking-wide animate-fade-in delay-200">
+                <p className="text-sm font-medium text-white/80 uppercase tracking-wide animate-fade-in delay-200">
                   Michigan State University
                 </p>
-                <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white text-balance animate-fade-in-up delay-300">
-                  Alternative <span className="text-green-300 font-black">Investments</span> Group
+                <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-balance animate-fade-in-up delay-300">
+                  <span className="text-white">Alternative</span> <span className="text-black">Investments</span> <span className="text-white">Group</span>
                 </h1>
               </div>
               <p className="text-xl text-white max-w-2xl text-pretty animate-fade-in-up delay-500 font-medium">
@@ -121,19 +121,6 @@ export default function HomePage() {
 
                   {/* Enhanced floating cards with glassmorphism */}
 
-              <GlassCard className="absolute -top-6 -right-6 p-4 animate-float delay-1000 hover:shadow-accent-strong transition-all-spring cursor-pointer micro-interaction">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center animate-pulse-slow delay-500">
-                    <Users className="h-5 w-5 text-accent" />
-                  </div>
-                  <div>
-                    <p className="text-sm font-medium">Active Members</p>
-                        <p className="text-lg font-bold text-accent">
-                          <AnimatedCounter end={50} suffix="+" delay={1500} />
-                        </p>
-                  </div>
-                </div>
-              </GlassCard>
             </div>
           </div>
         </div>

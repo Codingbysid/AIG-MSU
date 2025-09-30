@@ -28,8 +28,8 @@ export function Navigation() {
   return (
     <nav className={`sticky top-0 z-50 transition-all duration-300 ${
       scrolled 
-        ? 'bg-background/95 backdrop-blur-md shadow-glass border-b border-border/50' 
-        : 'bg-background/80 backdrop-blur-sm border-b border-border/30'
+        ? 'bg-white/10 backdrop-blur-md border-b border-white/20 shadow-lg' 
+        : 'bg-white/5 backdrop-blur-sm border-b border-white/10'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
@@ -42,7 +42,7 @@ export function Navigation() {
               height={40}
               className="rounded-lg group-hover:scale-105 transition-transform duration-300"
             />
-            <div className="text-xl font-bold text-foreground group-hover:text-accent transition-colors duration-300">
+            <div className="text-xl font-bold text-white group-hover:text-green-300 transition-colors duration-300">
               AIG<span className="text-gradient">MSU</span>
             </div>
           </Link>
@@ -53,7 +53,7 @@ export function Navigation() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-muted-foreground hover:text-foreground transition-all duration-300 font-medium relative group micro-interaction"
+                className="text-white/80 hover:text-white transition-all duration-300 font-medium relative group micro-interaction"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 {item.label}
@@ -92,7 +92,7 @@ export function Navigation() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="block px-3 py-2 text-muted-foreground hover:text-foreground transition-all duration-300 rounded-lg hover:bg-accent/10 micro-interaction"
+                className="block px-3 py-2 text-white/80 hover:text-white transition-all duration-300 rounded-lg hover:bg-white/10 micro-interaction"
                 onClick={() => setIsOpen(false)}
                 style={{ animationDelay: `${index * 100}ms` }}
               >
