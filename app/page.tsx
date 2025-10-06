@@ -72,7 +72,7 @@ export default function HomePage() {
                   Michigan State University
                 </p>
                 <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-balance animate-fade-in-up delay-300">
-                  <span className="text-white">Alternative</span> <span className="text-black">Investments</span> <span className="text-white">Group</span>
+                  <span className="text-white">Alternative</span> <span className="text-white">Investments</span> <span className="text-white">Group</span>
                 </h1>
               </div>
               <p className="text-xl text-white max-w-2xl text-pretty animate-fade-in-up delay-500 font-medium">
